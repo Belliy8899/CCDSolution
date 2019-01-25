@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+    <style>
+        .class1 {
+            background: #444;
+            color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <!--<div id="vue_det">
+        <p>site : {{name}}</p>
+        <h1>url : {{sex}}</h1>
+        <h1>Alexa : {{email}}</h1>
+    </div>-->
+    <div id="app1"><div v-html="message"></div></div>
+    <div id="app2">
+        {{10+1}}<br />
+        {{ok?'YES':'NO'}}<br />
+        <div v-bind:id="'list-'+id">你好</div>
+        <div v-if="ok"><h1>哈哈哈</h1></div>
+    </div>
+    <div id="app3"><a v-bind:href="url">百度</a></div>
+    <div id="app4">
+        <p>{{ message }}</p>
+        <input v-model="message">
+        <button v-on:click="remessage">翻转字符转</button>
+    </div>
+    <div id="app5">
+       {{ message | capitalize }}
+    </div>
+    <div id="app6">
+        <p v-if="seen">hello</p>
+        <div v-if="seen1">
+            <p>1111</p>
+            <p>2222</p>
+            <h1>3333</h1>
+        </div>
+    </div>
+    <script type="text/javascript">
+        new Vue({
+            el: 'app6',
+            data: {
+                seen: false,
+                seen1:false,
+            }
+        })
+        new Vue({
+            el: 'app5',
+            data: { message: 'hihihi' },
+            filters: {
+                caitalize: function (value) {
+                    if (!value) return ''
+                    value = value.toString();
+                    return value.charAt().toUpperCase() + value.slice(1);
+                }
+            }
+        })
+        new Vue({
+            el: '#app4',
+            data: {
+                message: '123123'
+            },
+            methods: {
+                remessage: function () {
+                    this.message = this.message.split(',').reverse().join('');
+                }
+            }
+        })
+        new Vue({
+            el: '#app2',
+            data: {
+                ok: false,
+                id: 1,
+            }
+        })
+        new Vue({
+            el: '#app3',
+            data: {
+                url: 'www.baidu.com',
+            }
+        })
+        // 我们的数据对象
+        //var data = { site: "菜鸟教程", url: "www.runoob.com", alexa: 10000}
+        //var vm = new Vue({
+        //    el: '#vue_det',
+        //    data: data
+        //})
+
+        //var data = { name: "张三", sex: "男", email: "123@qq.com" }
+        //var vue = new Vue({ el: '#vue_det', data: data })
+        //decument.write(vue.$data === data);
+        //document.write(vue.email == data.email);
+        //document.write("<br>")
+        //vue.email = "456@163.com";
+        //document.write(data.email + "<br>");
+        //data.name = "李四";
+        //document.write(vue.name);
+        //document.write(vue.$data === data);
+        //document.write(vue.$el)
+        //document.write(document.getElementById('vue_det'))
+
+        //new Vue({ el: "#app", data: { data1: "hello vue" } })
+        //new Vue({ el: "#app1", data: { message: '<h1>你好</h1>' } })
+        //new Vue({ el: "#app2", data: { ok: false } })
+        // 它们引用相同的对象！
+        //document.write(vm.site === data.site) // true
+        //document.write("<br>")
+        //// 设置属性也会影响到原始数据
+        //vm.site = "Runoob"
+        //document.write(data.site + "<br>") // Runoob
+
+        //// ……反之亦然
+        //data.alexa = 1234
+        //document.write(vm.alexa) // 1234
+
+    </script>
+    <div></div>
+</body>
+</html>

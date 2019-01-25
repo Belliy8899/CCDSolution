@@ -1,0 +1,150 @@
+﻿html {
+    background: url('../img/bg.jpg') #dbe4e6;
+    /*background-image: url(../img/nybj.png);*/
+    /*overflow: hidden;*/
+    background-repeat: repeat-x;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
+div.container-l {
+    width: 100%;
+    height: 100%;
+    /*overflow:auto*/
+}
+
+    div.container-l > div {
+        padding: 1px;
+    }
+
+    div.container-l > p {
+        margin-top: -10px;
+    }
+
+.FirstRow-div {
+    height: 13%;
+    width: 100%;
+    float: left;
+}
+
+.Logo {
+    height: 100%;
+    width: 15%;
+    float: left;
+}
+
+.Logo-div {
+    height: 100%;
+    width: 100%;
+    display: inherit;
+    /*background:-moz-linear-gradient(left top,#CBDCE0 20%, #020710 80%);*/
+    /*background: #0f3854;
+    background: -webkit-radial-gradient(left top, #162856 60%, #070f24 90%);
+    background: -moz-linear-gradient( left top, #162856 60%, #070f24 90%);*/
+    /*background: radial-gradient(ellipse at center, #CBDCE0 20%, #020710 70%);*/
+    /*background: -moz-linear-gradient( left top, #CBDCE0 60%, #070f24 90%);*/
+    background-size: 100%;
+    align-items: center;
+    text-align: left;
+    justify-content: center;
+    float: left;
+}
+
+.LogoImg {
+    margin-top: 5%;
+    width: 80%;
+    height: auto;
+}
+
+.TitleDiv {
+    float: left;
+    font-size: 30px;
+    /*margin-left: 20%;*/
+    width: 55%;
+    margin-top: 1%;
+    font-weight: bold;
+    color: orangered;
+}
+
+.QueryDiv {
+    float: left;
+    width: 30%;
+    margin-top: 1%;
+    /*margin-top:-1%;*/
+    /*margin-left:55%;*/
+}
+
+.SecondRow-div {
+    float: left;
+    width: 100%;
+    height: 100%;
+    margin-left: 1.5%;
+    margin-right: 5%;
+    margin-top: 0.5%;
+}
+
+.ContentDiv {
+    width: 100%;
+    height: 80%;
+}
+
+.CCDkpiDiv {
+    width: 100%;
+    height: 200px;
+}
+
+.CCDkpiDiv1 {
+    width: 100%;
+    height: 180px;
+}
+
+.LeftDiv {
+    float: left;
+    width: 80%;
+}
+
+.RightDiv {
+    float: left;
+    width: 19%;
+}
+
+.ProgessChart {
+    height: 290px;
+    width: 100%;
+    text-align: left;
+    vertical-align: middle;
+    margin-top: 20px;
+}
+
+.ProgessKPIChart {
+    height: 290px;
+    width: 100%;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.NewTime {
+    width: 100%;
+    height: 60px;
+}
+
+.Inform {
+    width: 100%;
+    height: 520px;
+    font-size: 16px;
+    vertical-align: top;
+}
+
+.time {
+    width: 200px;
+    height: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: inherit;
+    margin-left: 38%;
+}
+
+ul {
+    list-style-type: circle;
+}

@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CCDServer", "CCDServer\CCDServer.csproj", "{7B140DE1-FA1B-4FF2-83A5-0DCD4BBE41A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerTest", "ServerTest\ServerTest.csproj", "{A4B34E55-0F38-4877-8AD3-928E8B013BB5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7B140DE1-FA1B-4FF2-83A5-0DCD4BBE41A5} = {7B140DE1-FA1B-4FF2-83A5-0DCD4BBE41A5}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CCDReportDal", "CCDReportDal\CCDReportDal.csproj", "{2C479990-D3CF-4598-8115-2FD7952FD1C6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{60E88EC1-003F-425C-9B66-27BDAC423E9B} = {60E88EC1-003F-425C-9B66-27BDAC423E9B}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CCDReportModel", "CCDReportModel\CCDReportModel.csproj", "{60E88EC1-003F-425C-9B66-27BDAC423E9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CCDReportUI", "CCDReportUI\CCDReportUI.csproj", "{3507D965-D7A9-41B4-ABB6-03B766F3223D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{60E88EC1-003F-425C-9B66-27BDAC423E9B} = {60E88EC1-003F-425C-9B66-27BDAC423E9B}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B140DE1-FA1B-4FF2-83A5-0DCD4BBE41A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B140DE1-FA1B-4FF2-83A5-0DCD4BBE41A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B140DE1-FA1B-4FF2-83A5-0DCD4BBE41A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B140DE1-FA1B-4FF2-83A5-0DCD4BBE41A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4B34E55-0F38-4877-8AD3-928E8B013BB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4B34E55-0F38-4877-8AD3-928E8B013BB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4B34E55-0F38-4877-8AD3-928E8B013BB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4B34E55-0F38-4877-8AD3-928E8B013BB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C479990-D3CF-4598-8115-2FD7952FD1C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C479990-D3CF-4598-8115-2FD7952FD1C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C479990-D3CF-4598-8115-2FD7952FD1C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C479990-D3CF-4598-8115-2FD7952FD1C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60E88EC1-003F-425C-9B66-27BDAC423E9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60E88EC1-003F-425C-9B66-27BDAC423E9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60E88EC1-003F-425C-9B66-27BDAC423E9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60E88EC1-003F-425C-9B66-27BDAC423E9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3507D965-D7A9-41B4-ABB6-03B766F3223D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3507D965-D7A9-41B4-ABB6-03B766F3223D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3507D965-D7A9-41B4-ABB6-03B766F3223D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3507D965-D7A9-41B4-ABB6-03B766F3223D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
