@@ -64,6 +64,7 @@
     <Compile Include="Utils\SetParamsValues.cs" />
     <Compile Include="Utils\SqlHelper.cs" />
     <Compile Include="Utils\TableNameAttribute.cs" />
+    <Compile Include="Utils\XmlUtil.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

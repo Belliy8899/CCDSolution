@@ -17,6 +17,7 @@ namespace CCDReportUI.DataAPI
         {
             context.Response.ContentType = "text/plain";
             var ActType = context.Request["Action"];
+            var department = context.Request["Department"];
             if (string.IsNullOrEmpty(ActType))
             {
                 ActType = "GetProject";
@@ -24,13 +25,13 @@ namespace CCDReportUI.DataAPI
             switch (ActType)
             {
                 case "GetProject":
-                    context.Response.Write(JSONhelper.ToJson(CommonController.GetProjectList()));
+                    context.Response.Write(JSONhelper.ToJson(CommonController.GetProjectList(department)));
                     break;
                 case "GetEquipmentAdress":
-                    context.Response.Write(JSONhelper.ToJson(CommonController.GetEquAddressList()));
+                    context.Response.Write(JSONhelper.ToJson(CommonController.GetEquAddressList(department)));
                     break;
                 case "GetEquipmentType":
-                    context.Response.Write(JSONhelper.ToJson(CommonController.GetEquTypeList()));
+                    context.Response.Write(JSONhelper.ToJson(CommonController.GetEquTypeList(department)));
                     break;
                 default:
                     break;

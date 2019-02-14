@@ -100,13 +100,22 @@
     <Content Include="Include\Css\bootstrap.min.css" />
     <Content Include="Include\Css\CCDKpiDetails - 复制.css" />
     <Content Include="Include\Css\CCDKpiDetails.css" />
+    <Content Include="Include\Css\login.css" />
+    <Content Include="Include\img\dl.png" />
+    <Content Include="Include\img\hj.png" />
+    <Content Include="Include\img\ht_name.png" />
+    <Content Include="Include\img\lgbg.png" />
+    <Content Include="Include\img\loading.gif" />
+    <Content Include="Include\img\srbg.png" />
     <Content Include="Include\JS\bootstrap-datetimepicker.js" />
     <Content Include="Include\JS\bootstrap-datetimepicker.min.css" />
     <Content Include="Include\JS\bootstrap-datetimepicker.zh-CN.js" />
     <Content Include="Include\JS\bootstrap.min.js" />
+    <Content Include="Include\JS\jquerysession.js" />
     <Content Include="Include\JS\popper.min.js" />
     <Content Include="Include\JS\scripts\CCDKpi - 复制.js" />
     <Content Include="Include\JS\scripts\CCDKpiDetails.js" />
+    <Content Include="Include\JS\scripts\login.js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -138,6 +147,7 @@
     <Content Include="DataAPI\CCDKpiReport.ashx" />
     <Content Include="DataAPI\CCDKpiDetails.ashx" />
     <Content Include="DataAPI\Common.ashx" />
+    <Content Include="DataAPI\login.ashx" />
     <None Include="Properties\PublishProfiles\CCD.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -2192,7 +2202,7 @@
     <Content Include="Views\CCDKpiDetails.aspx" />
     <Content Include="Views\CCDKpiReport.aspx" />
     <Content Include="Views\CCDKpiReport - 复制.aspx" />
-    <Content Include="Views\Vue.html" />
+    <Content Include="Views\Login.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -2204,6 +2214,9 @@
     </Compile>
     <Compile Include="DataAPI\Common.ashx.cs">
       <DependentUpon>Common.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="DataAPI\login.ashx.cs">
+      <DependentUpon>login.ashx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -2229,6 +2242,13 @@
     </Compile>
     <Compile Include="Views\CCDKpiReport - 复制.aspx.designer.cs">
       <DependentUpon>CCDKpiReport - 复制.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

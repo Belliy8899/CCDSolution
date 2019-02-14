@@ -10,19 +10,28 @@ namespace CCDReportDal.Controller
 {
     public static class CommonController
     {
-        public static IEnumerable<ProjectModel> GetProjectList()
+        public static IEnumerable<ProjectModel> GetProjectList(string department)
         {
-            IEnumerable<ProjectModel> Ret = DBHelper.GetList<ProjectModel>("SELECT DISTINCT projectname FROM kpi", null);
+            string sql = string.Format("SELECT DISTINCT projectname FROM kpi where 1=1 {0}", department == "all" ? "" : "and equipmentadress like '%" + department + "%'");
+            IEnumerable<ProjectModel> Ret = DBHelper.GetList<ProjectModel>(sql, null);
             return Ret;
         }
-        public static IEnumerable<EquAddressModel> GetEquAddressList()
+        public static IEnumerable<EquAddressModel> GetEquAddressList(string department)
         {
-            IEnumerable<EquAddressModel> Ret = DBHelper.GetList<EquAddressModel>("SELECT DISTINCT equipmentadress FROM dbo.kpi ", null);
+            string sql = string.Format("SELECT DISTINCT equipmentadress FROM kpi where 1=1 {0}", department == "all" ? "" : "and equipmentadress like '%" + department + "%'");
+            IEnumerable<EquAddressModel> Ret = DBHelper.GetList<EquAddressModel>(sql, null);
             return Ret;
         }
-        public static IEnumerable<EquTypeModel> GetEquTypeList()
+        public static IEnumerable<EquTypeModel> GetEquTypeList(string department)
         {
-            IEnumerable<EquTypeModel> Ret = DBHelper.GetList<EquTypeModel>("SELECT DISTINCT equipmenttype FROM dbo.kpi ", null);
+            string sql = string.Format("SELECT DISTINCT equipmenttype FROM kpi where 1=1 {0}", department == "all" ? "" : "and equipmentadress like '%" + department + "%'");
+            IEnumerable<EquTypeModel> Ret = DBHelper.GetList<EquTypeModel>(sql, null);
+            return Ret;
+        }
+        public static IEnumerable<User> GetUserList()
+        {
+            string sql = string.Format("SELECT * FROM  users ");
+            IEnumerable<User> Ret = DBHelper.GetList<User>(sql, null);
             return Ret;
         }
     }

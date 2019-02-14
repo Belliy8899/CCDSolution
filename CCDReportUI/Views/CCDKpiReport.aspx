@@ -12,6 +12,7 @@
     <link href="../Include/Css/bootstrap.min.css" rel="stylesheet" />
     <link href="../Include/Css/CCDKpiReport.css" rel="stylesheet" />
     <script src="../Include/JS/jquery-1.8.3.min.js"></script>
+    <script src="../Include/JS/jquerysession.js"></script>
     <script src="../Include/JS/bootstrap.min.js"></script>
     <script src="../Include/JS/popper.min.js"></script>
     <%-- <script src="../Include/easyui/1.3.4/jquery.easyui.min.js"></script>
@@ -30,12 +31,12 @@
                 </div>
             </div>
             <div class="TitleDiv">
-                <div style="margin-left:30%">
+                <div style="margin-left: 30%">
                     欣旺达CCD视觉监控数据智能看板
                 </div>
             </div>
             <div class="QueryDiv">
-                <div style="margin-left:10%">
+                <div>
                     <div>
                         <label>项目名称：</label>
                         <select id="projectname" name="projectname" style="width: 100px;">
@@ -49,7 +50,8 @@
                         <select id="equipmenttype" name="equipmenttype" style="width: 100px;">
                         </select>
                         <label>
-                            <input type="checkbox" id="alram" />&nbsp;筛选异常设备</label>
+                            <input type="checkbox" id="alram" />&nbsp;仅看报警
+                            <input type="checkbox" id="online" />&nbsp;仅看离线</label>
                     </div>
                 </div>
             </div>

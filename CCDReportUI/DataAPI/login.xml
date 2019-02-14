@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<LoginInfo>
+	<User>
+		<name>all</name>
+		<pass>123456</pass>
+	</User>
+	<User>
+		<name>电池事业一部</name>
+		<pass>123456</pass>
+	</User>
+	<User>
+		<name>电池事业二部</name>
+		<pass>123456</pass>
+	</User>
+	<User>
+		<name>电池事业三部</name>
+		<pass>123456</pass>
+	</User>
+</LoginInfo>

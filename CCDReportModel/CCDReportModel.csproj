@@ -44,6 +44,7 @@
     <Compile Include="EquTypeModel.cs" />
     <Compile Include="KpiDetailsModel.cs" />
     <Compile Include="KpiModel.cs" />
+    <Compile Include="LoginInfo.cs" />
     <Compile Include="ProjectModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

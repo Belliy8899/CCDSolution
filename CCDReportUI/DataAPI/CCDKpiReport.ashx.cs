@@ -21,6 +21,8 @@ namespace CCDReportUI.DataAPI
             string equipmentadress = context.Request["equipmentadress"];
             string equipmenttype = context.Request["equipmenttype"];
             string IsAlram = context.Request["Isalram"];
+            string department = context.Request["Department"];
+            string IsOnline = context.Request["Isonline"];
             if (string.IsNullOrEmpty(Action))
             {
                 Action = "GetCCDKpiData";
@@ -33,9 +35,11 @@ namespace CCDReportUI.DataAPI
             {
                 case "GetCCDKpiData":
                     if (IsAlram == "true")
-                        context.Response.Write(JSONhelper.ToJson(CCDKpiController.GetAlramKpi(IsAlram)));
+                        context.Response.Write(JSONhelper.ToJson(CCDKpiController.GetAlramKpi(IsAlram, department)));
+                    else if (IsOnline == "true")
+                        context.Response.Write(JSONhelper.ToJson(CCDKpiController.GetOutLine(IsOnline, department)));
                     else
-                        context.Response.Write(JSONhelper.ToJson(CCDKpiController.GetCCDKpi(projectname, equipmentadress,equipmenttype)));
+                        context.Response.Write(JSONhelper.ToJson(CCDKpiController.GetCCDKpi(projectname, equipmentadress, equipmenttype, department)));
                     break;
                 default:
                     break;
